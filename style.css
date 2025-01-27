@@ -81,7 +81,11 @@ input {
 }
 
 .head {
-    font-size: 35px;
+    font-size: 60px;
+}
+
+.header {
+    text-align: center;
 }
 
 label {
@@ -93,6 +97,10 @@ label {
     position: absolute;
     top: 50%;
     left: 15px;
+    transition: 
+        top 0.3s ease, 
+        font-size 0.3s ease, 
+        left 0.3s ease;
 }
 div input:user-valid + label,
 div input:user-invalid + label,
@@ -102,11 +110,26 @@ div input:focus + label {
     background-color: var(--clr-form-bg);
 }
 
-div input:valid {
+div input:user-valid {
     outline: 1.5px solid darkgreen;
 }
 
 
 div input:user-invalid {
     outline: 1.5px solid darkred;
+}
+
+.footer button {
+    font-size: 20px;
+    padding: 20px 30px;
+    border-radius: 20px;
+    font-family: var(--ff-primary);
+    background-color: var(--clr-bg);
+    border: none;
+    color: black;
+    transition: transform 0.5s ease;
+}
+
+.footer button:hover {
+    transform: scale(1.1);
 }

@@ -267,10 +267,11 @@
         </div>
         <div class="right">
 
-            <div class="head">
-                <h1>SIGN UP TODAY</h1>
+            <div class="header">
+                <h1 class="head">SIGN UP TODAY</h1>
+                <p>Join the waitlist and get building today!</p>
             </div>
-
+            
             <form action="" method="" class="form">
                 <div>
                     <input type="text" name="firstName" id="firstName" required>
@@ -289,7 +290,7 @@
                 </div>
 
                 <div>
-                    <input type="text" name="phone" id="phone" required>
+                    <input type="text" name="phone" id="phone" pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$" required>
                     <label for="phone">Phone</label>
 
                 </div>
@@ -305,7 +306,11 @@
                     <label for="confirmPassword">Confirm Password</label>
                 </div>
 
-                <button type="submit" style="display: inline-block;">Create Account</button>
+                <div class="footer">
+                   
+                    <button type="submit" class="btn">Create Account</button>
+                </div>
+                
 
             </form>
         </div>
