@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+:root {
+    --clr-bg:hsl(257, 100%, 65%);
+    --clr-form:hsl(257, 85%, 95%);
+    --clr-form-bg:hsl(243, 100%, 93%);
+    --form-gap: 30px;
+    --ff-primary: "Sour Gummy", sans-serif;
+    --clr-valid: #e8f0fe;
+
+}
+
+* body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--ff-primary);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--clr-bg)
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 95%;
+    width: 95%;
+    background-color: var(--clr-form-bg);
+    border-radius: 10px;
+}
+
+.left {
+    width: 45%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(1);
+}
+
+.right {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    max-width: 700px;
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--form-gap);
+    justify-content: center;
+    align-items: center;
+}
+
+.form div {
+    position: relative;
+    padding-top: 20px;
+}
+
+input {
+    width: 275px;
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--clr-form);
+    font-family: inherit;
+    outline: 1.5px solid var(--clr-bg);
+    font-size: 20px
+}
+
+.head {
+    font-size: 35px;
+}
+
+label {
+    font-family: var(--ff-primary);
+    font-size: 17px;
+}
+
+.form div label {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+}
+div input:user-valid + label,
+div input:user-invalid + label,
+div input:focus + label {
+    top: -5px;
+    left: 3px;
+    background-color: var(--clr-form-bg);
+}
+
+div input:valid {
+    outline: 1.5px solid darkgreen;
+}
+
+
+div input:user-invalid {
+    outline: 1.5px solid darkred;
+}
